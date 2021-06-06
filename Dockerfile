@@ -48,8 +48,8 @@ RUN set -ex; \
     ln -s ../sites-available/default.conf "conf/sites-enabled"; \
     # Install openssl if we need to generate a self-signed certificate.
     apk add --no-cache openssl
-    chmod +x docker-entrypoint.sh
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 EXPOSE 80/tcp 443/tcp
-ENTRYPOINT [ "docker-entrypoint.sh" ]
+RUN ["chmod"，"+x"，"./docker-entrypoint.sh"]
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD [ "httpd-foreground" ]
