@@ -49,7 +49,7 @@ RUN set -ex; \
     # Install openssl if we need to generate a self-signed certificate.
     apk add --no-cache openssl
 EXPOSE 80/tcp 443/tcp
-RUN ["chmod"，"+x"，"./docker-entrypoint.sh"]
+RUN ["chmod"，"+x"，"docker-entrypoint.sh"]
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [ "httpd-foreground" ]
