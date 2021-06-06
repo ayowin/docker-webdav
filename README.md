@@ -8,11 +8,11 @@ docker run --restart always -v {MOUNT_PATH}:/var/lib/dav -e AUTH_TYPE=Digest -e 
 
 * such as
 ```shell
-docker run --restart always -v /root/webdav:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME=admin -e PASSWORD=123456 --publish 65535:80 --name webdav -d weizai/webdav
+docker run --restart always -v /root/webdav:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME=admin -e PASSWORD=123456 --publish 65535:80 --name docker_webdav -d weizai/webdav
 # means:
 #     url: http://xxx.xxx.xxx.xxx:65535
 #     username: admin
 #     password: 123456
 #     storage path: /root/webdav
-#     docker process alias: webdav
+#     docker process alias: docker_webdav
 ```
