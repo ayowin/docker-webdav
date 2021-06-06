@@ -3,12 +3,12 @@
 ## Usage
 
 ```shell
-docker run --restart always -v {MOUNT_PATH}:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME={USERNAME} -e PASSWORD={PASSWORD} --publish {MOUNT_PORT}:80 -d bytemark/webdav
+docker run --restart always -v {MOUNT_PATH}:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME={USERNAME} -e PASSWORD={PASSWORD} --publish {MOUNT_PORT}:80 -d weizai/webdav
 ```
 
 * such as
 ```shell
-docker run --restart always -v /root/webdav:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME=admin -e PASSWORD=123456 --publish 65535:80 -d bytemark/webdav
+docker run --restart always -v /root/webdav:/var/lib/dav -e AUTH_TYPE=Digest -e USERNAME=admin -e PASSWORD=123456 --publish 65535:80 -d weizai/webdav
 # means:
 #     url: http://xxx.xxx.xxx.xxx:65535
 #     username: admin
