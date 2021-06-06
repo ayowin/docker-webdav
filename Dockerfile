@@ -51,5 +51,5 @@ RUN set -ex; \
 EXPOSE 80/tcp 443/tcp
 RUN ["chmod"，"+x"，"./docker-entrypoint.sh"]
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [ "httpd-foreground" ]
